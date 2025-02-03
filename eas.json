@@ -1,0 +1,91 @@
+{
+  "cli": {
+    "version": ">= 10.0.3"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "",
+        "EXPO_PUBLIC_WEBHOOK_API_URL": "",
+        "EXPO_PUBLIC_GATEWAY_API_URL": "",
+        "EXPO_PUBLIC_DEVELOPMENT=": "development"
+      }
+    },
+    "local-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "local-simulator",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "",
+        "EXPO_PUBLIC_WEBHOOK_API_URL": "",
+        "EXPO_PUBLIC_GATEWAY_API_URL": "",
+        "EXPO_PUBLIC_LOCAL_SIMULATOR": "local_simulator"
+      }
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development-simulator",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "",
+        "EXPO_PUBLIC_WEBHOOK_API_URL": "",
+        "EXPO_PUBLIC_GATEWAY_API_URL": "",
+        "EXPO_PUBLIC_DEVELOPMENT_SIMULATOR": "development_simulator"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "",
+        "EXPO_PUBLIC_WEBHOOK_API_URL": "",
+        "EXPO_PUBLIC_GATEWAY_API_URL": "",
+        "EXPO_PUBLIC_PREVIEW": "preview"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "",
+        "EXPO_PUBLIC_WEBHOOK_API_URL": "",
+        "EXPO_PUBLIC_GATEWAY_API_URL": "",
+        "EXPO_PUBLIC_PRODUCTION": "production"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account-key.json",
+        "track": "production"
+      }
+    }
+  }
+}
